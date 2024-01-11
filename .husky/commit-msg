@@ -1,0 +1,10 @@
+#!/bin/sh
+
+message="$(cat "$1")"
+requiredPattern=" ^[a-z]"
+
+if [[ $message =~ $requiredPattern ]];
+then
+    printf "$warning Check commit message.\n"
+    exit 1
+fi
