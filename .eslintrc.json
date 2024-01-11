@@ -1,0 +1,89 @@
+{
+  "root": true,
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "import",
+    "sort-export-all",
+    "eslint-plugin-tsdoc"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "rules": {
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "curly": "error",
+    "no-inferrable-types": 0,
+    "no-unused-vars": "off",
+    "import/no-unresolved": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "args": "after-used",
+        "argsIgnorePattern": "^_|type",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "no-var": "error",
+    "no-console": ["error", { "allow": ["warn", "error", "info"] }],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "prettier/prettier": "error",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "import/newline-after-import": ["error", { "count": 1 }],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "external",
+          "builtin",
+          "parent",
+          "sibling",
+          "index",
+          "internal",
+          "object"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@moodysanalytics/cre-**",
+            "group": "builtin",
+            "position": "before"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "sort-export-all/sort-export-all": [
+      "error",
+      "asc",
+      {
+        "caseSensitive": false
+      }
+    ],
+    "tsdoc/syntax": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["*.test.ts", "*.test.tsx"],
+      "env": {
+        "jest": true
+      },
+      "rules": {}
+    }
+  ]
+}
