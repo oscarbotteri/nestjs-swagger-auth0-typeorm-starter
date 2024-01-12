@@ -1,9 +1,9 @@
-import { NestFactory, Reflector } from '@nestjs/core';
 import { ClassSerializerInterceptor, ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { NestFactory, Reflector } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
-import compression from 'compression';
 import { useContainer } from 'class-validator';
+import compression from 'compression';
 import { AppModule } from './app.module';
 import { HttpLoggingInterceptor } from './common';
 
