@@ -10,6 +10,9 @@ $ nvm use
 $ nvm install
 ```
 
+Create a `.env` file from the local example (`.env.example`) and fill in the missing values by pinging another dev.
+Once the file are defined you can start the app.
+
 ## Installation
 
 Run the following commands to clone the repo and install dependencies:
