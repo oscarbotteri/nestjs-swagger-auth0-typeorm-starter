@@ -1,13 +1,18 @@
-import { TestBed } from '@automock/jest';
+import { Test, TestingModule } from '@nestjs/testing';
 import { HealthService } from './health.service';
 
 describe('HealthService', () => {
+  let module: TestingModule;
   let healthService: HealthService;
 
   beforeEach(async () => {
-    const { unit } = TestBed.create(HealthService).compile();
+    jest.clearAllMocks();
 
-    healthService = unit;
+    module = await Test.createTestingModule({
+      providers: [HealthService],
+    }).compile();
+
+    healthService = module.get(HealthService);
   });
 
   it('should be defined', () => {
