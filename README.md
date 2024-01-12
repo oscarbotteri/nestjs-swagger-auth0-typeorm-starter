@@ -52,7 +52,7 @@ $ npm run test:cov
 
 ## Migrations
 
-To interact with TypeORM from the comand line, we create some npm scripts to run migrations, seeds, etc:
+To interact with TypeORM from the comand line, we created some npm scripts to run migrations, seeds, etc:
 
 ```bash
 # create migration to create a new table
