@@ -1,6 +1,6 @@
-# DEPT Central API
+# NestJS Swagger Auth0 TypeORM Starter
 
-🛠️💡 This is the beating heart of Dept® Central: our backend powered by Node.js, with NestJS/Express woven into its core. Here, ideas become reality and data comes to life. Dive into the backend that powers the Dept® Central experience.
+Just a simple NestJS template for me.
 
 ## Getting Started
 
