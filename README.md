@@ -17,7 +17,7 @@ Once the file are defined you can start the app.
 
 Run the following commands to clone the repo and install dependencies:
 ```bash
-$ git clone https://github.com/oscarbotteri/nestjs-swagger-auth0-typeorm-starter.git
+$ git clone git@github.com:oscarbotteri/nestjs-swagger-auth0-typeorm-starter.git
 ¢ cd nestjs-swagger-auth0-typeorm-starter
 $ npm install
 ```
