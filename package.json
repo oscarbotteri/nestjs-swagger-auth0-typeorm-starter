@@ -18,7 +18,11 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "db:migrate:create": "npx typeorm-ts-node-commonjs migration:create",
+    "db:migrate:run": "npx typeorm-ts-node-commonjs migration:run -d database/typeorm.config.ts",
+    "db:seed": "npx ts-node -P tsconfig.json database/seeds/index.ts",
+    "db:reset": "npx ts-node -P tsconfig.json database/operations/reset.ts"
   },
   "dependencies": {
     "@faker-js/faker": "^8.3.1",
